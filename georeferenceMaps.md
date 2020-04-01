@@ -1,3 +1,4 @@
+---
 title: Georeferencing and Displaying Historic Maps with Map Warper and ArcGIS Online
 collection: lessons
 layout: lesson
@@ -25,16 +26,11 @@ topics: [LEAVE BLANK]
 abstract: [LEAVE BLANK]
 ---
 
-# Contents
+# Table of Contents
 
+{ % include toc.html %}
 
-
-## Contents
-{:.no_toc}
-
-* TOC
-{:toc}
-
+---
 
 # Lesson Goals
 
@@ -69,7 +65,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 5. Towards the bottom of the screen, click the Choose File button under “Upload an image file.” Navigate to the North_Carolina.jpg map that you downloaded to your computer and click Create.
 
-## Step 2: Georeference your map
+## Step 2: Explore the Map Warper Interface
 
 1. You now have your map loaded into Map Warper. The interface is organized into the following tabs:
 
@@ -81,6 +77,8 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
   * Export: gives you a variety of export options and formats
 
 {% include figure.html filename="images/georeferenceMaps/mapwarper_showmap.png" caption="The Map Warper interface" %}
+
+## Step 3: Georeference your map
 
 2. Click on the Rectify tab
 
@@ -103,6 +101,8 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 {% include figure.html filename="images/georeferenceMaps/mapwarper_controlpts.png" caption="" %}
 
+*Note*
+
 9. Selecting Control Points will display all of the points you have added, and enable you to delete any points that you want to re-do. You also have the option of changing the latitude and longitude manually.
 
 {% include figure.html filename="images/georeferenceMaps/mapwarper_controlptsExp.png" caption="It doesn't look like linked text, but you can click the Control Points text to see all of the points you've added and their Error scores." %}
@@ -113,39 +113,12 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 12. Click the Preview tab for a larger view of the georeferenced map. Changing the opacity can give you a sense of how accurate your georeferencing is.
 
+## Step 2: Export your map
+
 13. Click the Export tab
 
 14. Choose “Download Rectified GeoTIFF.” You can use this GeoTIFF to publish your map online, as we’ll show you in the next activity, or you can upload it into GIS software programs such as QGIS or ArcGIS.
 
-# Loading a Map into Mapbox.com
-*Next, we’ll upload our georeferenced map onto Mapbox.com, which allows you to create custom web maps that can be used in a variety of online mapping applications.*
-
-1. To load in your georeferenced map, you’ll need the GeoTIFF file you created when georeferencing.
-2. Go to [www.Mapbox.com](www.Mapbox.com). Click the Sign In button at the top right to login or create an account.
-3. Once you are signed in, click on the dropdown next to the Astronaut at the top right and choose Studio.
-4. Under Styles, click the New Style button, then next to "Basic Template," click Create.
-{% include figure.html filename="images/georeferenceMaps/mapbox_newstyle.png" caption="" %}
-5. You have now loaded in a map that is customizable--you can change anything, including the colors, fonts, what features appear (highways, feature labels), and more.
-6. In the search box, type “North Carolina,” so that it moves the map view to where our georeferenced map is.
-
-{% include figure.html filename="images/georeferenceMaps/mapbox_searchLocation.png" caption="Center your map on the appropriate location" %}
-
-7. Click on the Add Layer button. The “New layer” menu appears. Click the Upload button.
-{% include figure.html filename="images/georeferenceMaps/mapbox_upload.png" caption="Click Upload within the Add Layer menu to add your GeoTIFF." %}
-8. Select your georeferenced map file, Open it, and Confirm.
-9. Once your map has finished loading, you’ll need to refresh the page and click on “Add layer” again, then choose your layer from the menu of "Unused sources." Click on the map title, and then click on the layer name that appears below it.
-10. Your layer will now appear on the map.
-11. To make the New layer menu go away, click the three bars next to the new layer's name--it will be at the top of the list of layers on the left side.  
-12. Next, we're going to publish and share the map so it can be used in other applications. On the top right, click Publish, then "Publish as New." Next, click Share, then toggle the map to Public.
-
-{% include figure.html filename="images/georeferenceMaps/mapbox_share.png" caption="" %}
-
-13. Without closing the Share window, click Use. A new menu will come up; click Third party from the bottom of the list. Finally, click on ‘ArcGIS Online’ from the menu along the top.
-
-{% include figure.html filename="images/georeferenceMaps/mapbox_use.png" caption="Make your map Public in order to share it" %}
-
-14. Copy the link in the Integration URL box by clicking on the blue clipboard next to the url box.
-15.You will use this link to load the map into ArcGIS Online. You can leave this window open while you sign in to ArcGIS Online (following the next activity) in case you need to copy the link again later.
 
 ## Step 3: Loading your map into ArcGIS Online
 *ArcGIS Online has public accounts available, which allow you to create maps and Story Maps that are shareable on the web. Using the Mapbox Integration URL, you can also bring your historic maps into other platforms such as Carto and Tableau, as well as any web maps you create, for example using Leaflet.js.*

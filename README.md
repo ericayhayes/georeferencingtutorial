@@ -1,9 +1,3 @@
-## Bringing Historical Maps into GIS Workshop Blog post for Programming Historian
-*Project by Erica Hayes and Mia Partlow*
-
-This blog provides more details about the Bringing Historical Maps into GIS Workshop Tutorial given at the NCSU Libraries by Erica Hayes and Mia Partlow.
-
-
 ---
 title: Georeferencing and Displaying Historic Maps with Map Warper and ArcGIS Online
 collection: lessons
@@ -44,7 +38,7 @@ Georeferencing is the process of assigning geographic coordinates to a scanned m
 
 Before you begin georeferencing a scanned map, it is important to understand the locations depicted on the map, as well as the context of the creation of the historic map itself. Not all historic maps are good candidates for georeferencing. There must be enough information on the map to allow you to confidently assign latitude and longitude coordinates to it or align it with a GIS map using physical features. Often, you will need to research the location of historic places and features that no longer exist, and make an informed decision in order to identify its proper placement. Some maps may not have enough geographic information, and may become so warped when georeferenced that they are illegible or inaccurate. The scale, resolution, and projection of a scanned map are also important considerations when choosing a historic map to georeference. Small scale maps are generally not well suited for highly detailed georeferencing and may cause problems with representing exact feature locations. When selecting or scanning a historic map for georeferencing, it is better to use a map that has been scanned at a high resolution (300 dpi or greater), so you can easily see the features on the map when zooming in and out. It is also best practice to use the same projection as the historic map in order to minimize distortion.
 
-{% include figure.html filename="images/georeferenceMaps/warped_map.png" caption="A map too warped to use effectively." %}
+{% include figure image_path="images/georeferenceMaps/warped_map.png" caption="A map too warped to use effectively." %}
 
 Georeferencing a map in the wrong projection  can create a mismatch between your historical and current maps, stretching the lines, shapes, and the distance between objects on the historical map. Map Warper, the tool used in this tutorial, does not provide an option to re-project your map data; if you are unable to achieve a legible map, or if you are measuring distance, you may need to use a more advanced GIS software, such as QGIS or ArcMap, which will allow you to specify the map projections.
 

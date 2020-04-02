@@ -12,7 +12,7 @@ Before you begin georeferencing a scanned map, it is important to understand the
 
 The scale, resolution, and projection of a scanned map are also important considerations when choosing a historic map to georeference. Small scale maps are generally not well suited for highly detailed georeferencing and may cause problems with representing exact feature locations. When selecting or scanning a historic map for georeferencing, it is better to use a map that has been scanned at a high resolution (300 dpi or greater), so you can easily see the features on the map when zooming in and out. It is also best practice to use the same projection as the historic map in order to minimize distortion. Georeferencing a map in the wrong projection  can create a mismatch between your historical and current maps, stretching the lines, shapes, and the distance between objects. Map Warper, the tool used in this tutorial, does not provide an option to re-project your map data; if you are unable to achieve a legible map, or if you are measuring distance, you may need to use a more advanced GIS software, such as QGIS or ArcMap, which will allow you to specify the map projections. For more details on best practices for georeferencing, see [Esri’s list of recommendations](https://www.esri.com/esri-news/arcuser/spring-2014/~/media/Files/Pdfs/news/arcuser/0314/seven-best-practices.pdf).
 
-In this tutorial, you will work with Map Warper and ArcGIS Online to create a georeferenced historical map and overlay it on top of a modern basemap to be published and interacted with on the web. Developed by Tim Waters, [Map Warper](https://mapwarper.net) is an open-source georeferencing service, written in Ruby on Rails and lets users upload scanned maps and georeference them against OpenStreetMap. [ArcGIS Online] (https://www.esri.com/en-us/arcgis/products/arcgis-online/overview) is a cloud-based mapping and analysis platform by Esri. You can use ArcGIS Online to create maps, analyze data, tell stories, and share maps online.
+In this tutorial, you will work with Map Warper and ArcGIS Online to create a georeferenced historical map and overlay it on top of a modern basemap to be published and interacted with on the web. Developed by Tim Waters, [Map Warper](https://mapwarper.net) is an open-source georeferencing service, written in Ruby on Rails and lets users upload scanned maps and georeference them against OpenStreetMap. [ArcGIS Online](https://www.esri.com/en-us/arcgis/products/arcgis-online/overview) is a cloud-based mapping and analysis platform by Esri. You can use ArcGIS Online to create maps, analyze data, tell stories, and share maps online.
 
 # Getting Started: Georeferencing your map with MapWarper.net
 *You will start by uploading a map and georeferencing it using the open source online tool Map Warper. Map Warper has a variety of export options, including WMS URL and a GeoTIFF or KML file. For the purposes of this tutorial we will export the georeferenced map as map tiles and load it into to ArcGIS Online.*
@@ -83,13 +83,11 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 11. You will now see the map layered on top of the OpenStreetMap.
 
-![](images/mapwarperOpenStreetMap.png)
-
+![](images/mapwarper_openstreetmap.png)
 
 13. You can choose to view a satellite image basemap or the regular OpenStreetMap layer we’ve been using.
 
 ![](images/mapwarper_satellite.png)
-
 
 14. Click the Preview tab for a larger view of the georeferenced map. Changing the opacity can give you a sense of how accurate your georeferencing is.
 
@@ -99,23 +97,35 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 16. Click the Export tab
 
-17. Under Map Services, copy and paste the URL under Tiles and save it to be used later in ArcGIS Online. The URL Link should look similar to the following URL:
+![](images/mapwarper_export.png)
+
+17. Under Map Services, copy and paste the Tiles URL and save it to be used later in ArcGIS Online. The URL Link should look similar to the following URL:
 
 https://mapwarper.net/maps/tile/40210/{z}/{x}/{y}.png
 
 # Displaying your georeferenced map in ArcGIS Online
 
-*We will now load our georeferenced ArcGIS Online has public accounts available, which allow you to create maps and Story Maps that are shareable on the web. Using the Map Tiles URL, you can also bring your georeferenced map into other online platforms such as Carto, Mapbox, and Tableau, as well as any web maps you create, for example using Leaflet.js.*
+*We will now move on to loading our georeferenced map into ArcGIS Online. ArcGIS Online allow you to create maps and Story Maps that are shareable on the web.* *
 
 ## Step 1: Create an ArcGIS Online account
 
+1. Login to [ArcGIS Online](https://www.arcgis.com/index.html) and create a public account.
 
-1. Login to www.arcgisonline.com and create a public account.
 2. Once you are logged in, click on Map. This will open a new, blank map.
+
+![](images/arcgis_mapbutton.png)
+
 3. Click the Add drop-down menu and choose "Add layer from Web."
-{% include figure.html filename="images/georeferenceMaps/arcGIS_addLayer.png" caption="ArcGIS Online has several options for adding layers, including Add Layer from Web" %}
-4. Choose "A tile layer"
-{% include figure.html filename="images/georeferenceMaps/arcGIS_tileLayer.png" caption="ArcGIS Online allows you to upload several types of layers from the web, including Tile layers" %}
+
+![](images/arcgis_addlayerfromweb.png)
+
+4. Choose ""
+
+Enter the URL you copied from MapWarper, but change the end of the url from /{z}/{x}/{y}.png to /{level}/{col}/{row}.png. It will look like this:
+
+https://mapwarper.net/maps/tile/39452/{level}/{col}/{row}.jpg
+
+
 5. In the URL field, enter the Integration URL you copied from Mapbox.  In the Title and Credits, you will enter your own information. For example, Title: “North Carolina 1829” and Credits: “Georeferenced by [your name here]”. Click "Add Layer"
 {% include figure.html filename="images/georeferenceMaps/arcGIS_tileInfo.png" caption="Tile and Credits are required fields when adding a tile layer" %}
 6. Save your map. Add your title and at least one tag (example: ‘North Carolina’). Save.

@@ -55,21 +55,20 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 2. Click on the Rectify tab
 
-![](images/mapwarperzoom.png)
-
 3. Take a moment to move the map on the right to the North Carolina region. The arrows at the top of the screen move the map slightly to the North, South, East, and West and are useful when you need to make small adjustments to the map. You can zoom with the slider or with your trackpad/mouse.
 
-![](images/mapwarper_tools.png)
+![](images/mapwarperzoom.png)
 
-  * To move around a map, click the hand icon.
-  * To add a control point, you will click the green location marker and click the place on the map where you want it to go. Note: The control point will not be permanently selected until you click the "Add Control Point" button below the maps.
+* To move around a map, click the hand icon.
+* To add a control point, you will click the green location marker and click the place on the map where you want it to go. Note: The control point will not be permanently selected until you click the "Add Control Point" button below the maps.
+
+![](images/mapwarper_tools.png)
 
 4. Once you feel comfortable moving around in the maps, select your first control point. Start from the historic map and choose a location--for example, a city--that will be relatively easy to find on the modern map.
 
 5. Then, click the green marker on the modern map and find the same location.
 
 ![](images/mapwarper_controlpointsadded.png)
-
 
 6. Click the Add Control Point button. Note: If you do not click the Add Control Point button, the next time you click on a map, the control point you added will move. This functionality gives you the flexibility to adjust your points while adding them, but can be confusing if you don’t realize that your point has moved because you didn’t click Add Control Point.
 

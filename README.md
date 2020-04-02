@@ -1,5 +1,5 @@
 
-##Programming Historian Tutorial on Georeferencing and Displaying Historical Maps with Map Warper and ArcGIS online
+## Programming Historian Tutorial on Georeferencing and Displaying Historical Maps with Map Warper and ArcGIS online
 *By Erica Hayes and Mia Partlow*
 
 # Lesson Goals
@@ -20,15 +20,13 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 ## Step 1: Set up Map Warper and upload your map
 
-1. In this tutorial we will use an [1829 map of North Carolina](https://dc.lib.unc.edu/cdm/singleitem/collection/ncmaps/id/174/rec/4) from the NC Maps Collections. Download the Large (Full resolution of stored image) version.
+1. In this tutorial we will use an [1860 map of North Carolina](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-South-Carolina-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=7&trs=18) from the David Rumsey Map Collection. Download the Extra-Extra Large version.
 
   * Note: Every filename in Map Warper must be unique, so you will need to give the image a new file name, such as North_Carolina_yourlastname.jpg.
 
 2. Go to [https://mapwarper.net](https://mapwarper.net) and create an account.
 
 3. On the Home page, click the green button labeled Upload Map to import your scanned map to Map Warper.
-
-![](images/mapwarper_uploadmap.png)
 
 4. The next screen is asking for descriptive information that will make the map easier to find (also known as metadata). While only the Title field is required, it is generally best practice to provide as much information as possible, so other users can learn more about the source of your scanned map you are georeferencing. Fill in the metadata based on the information provided to you about the historical map that you’re working with. For the North Carolina map, you can find the map’s metadata below the image on the [North Carolina Maps collection site](https://dc.lib.unc.edu/cdm/singleitem/collection/ncmaps/id/174/rec/4).
 
@@ -98,17 +96,20 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 ![](images/mapwarper_preview.png)
 
-15. Another option Map Warper provides is cropping the map down. Click on the
-
-## Step 2: Export your map
+## Step 4: Export your map
 
 16. Click the Export tab
 
-17. Choose “Download Rectified GeoTIFF.” You can use this GeoTIFF to publish your map online, as we’ll show you in the next activity, or you can upload it into GIS software programs such as QGIS or ArcGIS.
+17. Under Map Services, copy and paste the URL under Tiles and save it to be used later in ArcGIS Online. The URL Link should look similar to the following URL:
 
+https://mapwarper.net/maps/tile/40210/{z}/{x}/{y}.png
 
-## Step 3: Loading your map into ArcGIS Online
-*ArcGIS Online has public accounts available, which allow you to create maps and Story Maps that are shareable on the web. Using the Mapbox Integration URL, you can also bring your historic maps into other platforms such as Carto and Tableau, as well as any web maps you create, for example using Leaflet.js.*
+# Displaying your georeferenced map in ArcGIS Online
+
+*We will now load our georeferenced ArcGIS Online has public accounts available, which allow you to create maps and Story Maps that are shareable on the web. Using the Map Tiles URL, you can also bring your georeferenced map into other online platforms such as Carto, Mapbox, and Tableau, as well as any web maps you create, for example using Leaflet.js.*
+
+## Step 1: Create an ArcGIS Online account
+
 
 1. Login to www.arcgisonline.com and create a public account.
 2. Once you are logged in, click on Map. This will open a new, blank map.

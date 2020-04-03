@@ -34,36 +34,36 @@ abstract: [LEAVE BLANK]
 
 # Lesson Goals
 
-Georeferencing is the process of assigning geographic coordinates to a scanned map or raster image. Many historians are now georeferencing historical maps in order to study how places have changed over time. In this lesson, we will take you through the steps to align geographic coordinates to a scanned historical map and show you how to share your georeferenced map online using an interactive web-based mapping platform like ArcGIS Online. While you may have already encountered the *Programming Historian* tutorial on [Georeferencing in QGIS 2.0](https://programminghistorian.org/en/lessons/georeferencing-qgis), we wanted to provide you with some examples of other entry-level georeferencing tools.
+Georeferencing is the process of assigning geographic coordinates to a scanned map or raster image. Many historians are now georeferencing historical maps in order to study how places have changed over time. In this lesson, we will take you through the steps to align geographic coordinates to a scanned historical map and show you how to share your georeferenced map online using an interactive web-based mapping platform, ArcGIS Online. While you may have already encountered the *Programming Historian* tutorial on [Georeferencing in QGIS 2.0](https://programminghistorian.org/en/lessons/georeferencing-qgis), we wanted to provide you with some examples of other entry-level georeferencing tools.
 
-Before you begin georeferencing a scanned map, it is important to understand the locations depicted on the map, as well as the context of the creation of the historic map itself. Not all historic maps are good candidates for georeferencing. There must be enough information on the map to allow you to confidently assign latitude and longitude coordinates to it or align it with a GIS map using physical features. Often, you will need to research the location of historic places and features that no longer exist, and make an informed decision in order to identify its proper placement. Some maps may not have enough geographic information, and may become so warped when georeferenced that they are illegible or inaccurate. The scale, resolution, and projection of a scanned map are also important considerations when choosing a historic map to georeference. Small scale maps are generally not well suited for highly detailed georeferencing and may cause problems with representing exact feature locations. When selecting or scanning a historic map for georeferencing, it is better to use a map that has been scanned at a high resolution (300 dpi or greater), so you can easily see the features on the map when zooming in and out. It is also best practice to use the same projection as the historic map in order to minimize distortion.
+Before you begin georeferencing a scanned map, it is important to understand the locations depicted on the map, as well as the context of the creation of the historic map itself. Not all historic maps are good candidates for georeferencing. There must be enough information on the map to allow you to confidently assign latitude and longitude coordinates to it or align it with a GIS map using physical features. Often, you will need to research the location of historic places and features that no longer exist, and make an informed decision in order to identify its proper placement. Some maps may not have enough geographic information, and may become so warped when georeferenced that they are illegible or inaccurate.
 
-{% include figure.html filename="images/georeferenceMaps/warped_map.png" caption="A map too warped to use effectively." %}
+{% include figure.html filename="images/images/mapwarper_warped.png" caption="A map too warped to be use effectively." %}
 
-Georeferencing a map in the wrong projection  can create a mismatch between your historical and current maps, stretching the lines, shapes, and the distance between objects on the historical map. Map Warper, the tool used in this tutorial, does not provide an option to re-project your map data; if you are unable to achieve a legible map, or if you are measuring distance, you may need to use a more advanced GIS software, such as QGIS or ArcMap, which will allow you to specify the map projections.
+The scale, resolution, and projection of a scanned map are also important considerations when choosing a historic map to georeference. Small scale maps are generally not well suited for highly detailed georeferencing and may cause problems with representing exact feature locations. When selecting or scanning a historic map for georeferencing, it is better to use a map that has been scanned at a high resolution (300 dpi or greater), so you can easily see the features on the map when zooming in and out. It is also best practice to use the same projection as the historic map in order to minimize distortion. Georeferencing a map in the wrong projection can create a mismatch between your historical and current maps, stretching the lines, shapes, and the distance between objects. Map Warper, the tool used in this tutorial, does not provide an option to re-project your map data; if you are unable to achieve a legible map, or if you are measuring distance, you may need to use a more advanced GIS software, such as QGIS or ArcGIS Pro, which will allow you to specify the map projections. For more details on best practices for georeferencing, see [Esri’s list of recommendations](https://www.esri.com/esri-news/arcuser/spring-2014/~/media/Files/Pdfs/news/arcuser/0314/seven-best-practices.pdf).
 
-For more details on best practices for georeferencing, see [Esri’s list of recommendations](https://www.esri.com/esri-news/arcuser/spring-2014/~/media/Files/Pdfs/news/arcuser/0314/seven-best-practices.pdf).
+In this tutorial, you will work with Map Warper and ArcGIS Online to create a georeferenced historical map and overlay it on top of a modern basemap to be published and interacted with on the web. Developed by Tim Waters, [Map Warper](https://mapwarper.net) is an open-source georeferencing service, written in Ruby on Rails and lets users upload scanned maps and georeference them against OpenStreetMap. [ArcGIS Online](https://www.esri.com/en-us/arcgis/products/arcgis-online/overview) is a cloud-based mapping and web analysis platform by Esri. You can use ArcGIS Online to create maps, analyze data, tell stories, and share maps online.
 
-In this tutorial, you will work with Map Warper and ArcGIS Online to create a georeferenced historical map and overlay it on top of a modern basemap to be published and interacted with online. [Map Warper](https://mapwarper.net) is an open-source georeferencing service, written in Ruby on Rails and lets users upload scanned maps and georeference them against OpenStreetMap. The project was created by Tim Waters and he currently maintains the project. [ArcGIS Online] (https://www.esri.com/en-us/arcgis/products/arcgis-online/overview) is a cloud-based mapping and analysis platform by Esri. You can use ArcGIS Online to create maps, analyze data, share maps online, and tell stories.
-
-# Getting Started: Georeferencing your map with MapWarper.net
-*You will start by uploading a map and georeferencing it using the open source online tool Map Warper. Map Warper has a variety of export options, including WMS URL and KML file. For the purposes of this tutorial we will export the georeferenced map as a GeoTIFF file and load it into Mapbox in order to upload it to ArcGIS Online. You can also upload a GeoTIFF to a desktop GIS software such as QGIS or ArcMap.*
+# Getting Started: Georeferencing your map with Map Warper
+*You will start by uploading a map and georeferencing it using the open source online tool Map Warper. Map Warper has a variety of export options, including WMS URL, Tiles, and a GeoTIFF or KML file. For the purposes of this tutorial we will export the georeferenced map as Tile layer and load it into to ArcGIS Online.*
 
 ## Step 1: Set up Map Warper and upload your map
 
-1. For this tutorial we will use an [1829 map of North Carolina](https://dc.lib.unc.edu/cdm/singleitem/collection/ncmaps/id/174/rec/4) from the NC Maps Collections. Download the Large (Full resolution of stored image) version.
+1. For this tutorial, we will use an [1860 map of North Carolina and South Carolina](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-South-Carolina-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=7&trs=18) from the David Rumsey Map Collection. Export and download the Extra-Extra Large version.
 
-  * Note: Every filename in Map Warper must be unique, so you will need to give the image a new file name, such as North_Carolina_yourlastname.jpg.
+  * Note: Every filename in Map Warper must be unique, so you will need to give the image a new file name once you have downloaded the map to your computer, such as NC_SC_Map_yourlastname.jpg.
 
 2. Go to [https://mapwarper.net](https://mapwarper.net) and create an account.
 
 3. On the Home page, click the green button labeled Upload Map to import your scanned map to Map Warper.
 
-{% include figure.html filename="images/georeferenceMaps/uploadmap.png" caption="Upload your map to Map Warper" %}
+4. The next screen is asking for descriptive information that will make the map easier to find (also known as metadata). While only the Title field is required, it is generally best practice to provide as much information as possible, so other users can learn more about the source of your scanned map you are georeferencing. Fill in the metadata based on the information provided to you about the historical map that you’re working with. For the North Carolina and South Carolina map, you can find the map’s metadata beside the map on the David Rumsey Map Collection's website (https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-South-Carolina-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=7&trs=18).
 
-4. The next screen is asking for descriptive information that will make the map easier to find (also known as metadata). While only the Title field is required, it is generally best practice to provide as much information as possible, so other users can learn more about the source of your scanned map. Fill in the metadata based on the information provided to you about the historical map that you’re working with. For the North Carolina map, you can find the map’s metadata below the image on the [North Carolina Maps collection site](https://dc.lib.unc.edu/cdm/singleitem/collection/ncmaps/id/174/rec/4).
+{% include figure.html filename="images/images/mapwarper_metadata.png" caption="Map Warper Metadata" %}
 
-5. Towards the bottom of the screen, click the Choose File button under “Upload an image file.” Navigate to the North_Carolina.jpg map that you downloaded to your computer and click Create.
+5. Towards the bottom of the screen, click on the Choose File button under “Upload an image file.” Navigate to the NC_SC.jpg map that you downloaded to your computer and click Create.
+
+{% include figure.html filename="images/images/mapwarper_create.png" caption="Map Warper Upload an Image and Create" %}
 
 ## Step 2: Explore the Map Warper Interface
 
@@ -76,13 +76,15 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
   * Preview: shows your map on top of a modern basemap
   * Export: gives you a variety of export options and formats
 
-{% include figure.html filename="images/georeferenceMaps/mapwarper_showmap.png" caption="The Map Warper interface" %}
+{% include figure.html filename="images/mapwarper_showmap.png" caption="The Map Warper Interface" %}
 
 ## Step 3: Georeference your map
 
 2. Click on the Rectify tab
 
-3. Take a moment to move the map on the right to the North Carolina region. The arrows at the top of the screen move the map slightly to the North, South, East, and West and are useful when you need to make small adjustments to the map. You can zoom with the slider or with your trackpad/mouse.
+3. Take a moment to move the map on the right to the North Carolina and South Carolina region. The arrows at the top of the screen move the map slightly to the North, South, East, and West and are useful when you need to make small adjustments to the map. You can zoom in and out with the slider or with your trackpad/mouse.
+
+![](images/mapwarperzoom.png)
 
 {% include figure.html filename="images/georeferenceMaps/mapwarper_screenshot.png" caption="Use the tools on the Rectify screen to pan, zoom, and add control points to your map." %}
 

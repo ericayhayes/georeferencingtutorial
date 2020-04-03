@@ -4,24 +4,24 @@
 
 # Lesson Goals
 
-Georeferencing is the process of assigning geographic coordinates to a scanned map or raster image. Many historians are now georeferencing historical maps in order to study how places have changed over time. In this lesson, we will take you through the steps to align geographic coordinates to a scanned historical map and show you how to share your georeferenced map online using an interactive web-based mapping platform like ArcGIS Online. While you may have already encountered the *Programming Historian* tutorial on [Georeferencing in QGIS 2.0](https://programminghistorian.org/en/lessons/georeferencing-qgis), we wanted to provide you with some examples of other entry-level georeferencing tools.
+Georeferencing is the process of assigning geographic coordinates to a scanned map or raster image. Many historians are now georeferencing historical maps in order to study how places have changed over time. In this lesson, we will take you through the steps to align geographic coordinates to a scanned historical map and show you how to share your georeferenced map online using an interactive web-based mapping platform, ArcGIS Online. While you may have already encountered the *Programming Historian* tutorial on [Georeferencing in QGIS 2.0](https://programminghistorian.org/en/lessons/georeferencing-qgis), we wanted to provide you with some examples of other entry-level georeferencing tools.
 
 Before you begin georeferencing a scanned map, it is important to understand the locations depicted on the map, as well as the context of the creation of the historic map itself. Not all historic maps are good candidates for georeferencing. There must be enough information on the map to allow you to confidently assign latitude and longitude coordinates to it or align it with a GIS map using physical features. Often, you will need to research the location of historic places and features that no longer exist, and make an informed decision in order to identify its proper placement. Some maps may not have enough geographic information, and may become so warped when georeferenced that they are illegible or inaccurate.
 
 ![](images/mapwarper_warped.png)
 
-The scale, resolution, and projection of a scanned map are also important considerations when choosing a historic map to georeference. Small scale maps are generally not well suited for highly detailed georeferencing and may cause problems with representing exact feature locations. When selecting or scanning a historic map for georeferencing, it is better to use a map that has been scanned at a high resolution (300 dpi or greater), so you can easily see the features on the map when zooming in and out. It is also best practice to use the same projection as the historic map in order to minimize distortion. Georeferencing a map in the wrong projection  can create a mismatch between your historical and current maps, stretching the lines, shapes, and the distance between objects. Map Warper, the tool used in this tutorial, does not provide an option to re-project your map data; if you are unable to achieve a legible map, or if you are measuring distance, you may need to use a more advanced GIS software, such as QGIS or ArcMap, which will allow you to specify the map projections. For more details on best practices for georeferencing, see [Esri’s list of recommendations](https://www.esri.com/esri-news/arcuser/spring-2014/~/media/Files/Pdfs/news/arcuser/0314/seven-best-practices.pdf).
+The scale, resolution, and projection of a scanned map are also important considerations when choosing a historic map to georeference. Small scale maps are generally not well suited for highly detailed georeferencing and may cause problems with representing exact feature locations. When selecting or scanning a historic map for georeferencing, it is better to use a map that has been scanned at a high resolution (300 dpi or greater), so you can easily see the features on the map when zooming in and out. It is also best practice to use the same projection as the historic map in order to minimize distortion. Georeferencing a map in the wrong projection can create a mismatch between your historical and current maps, stretching the lines, shapes, and the distance between objects. Map Warper, the tool used in this tutorial, does not provide an option to re-project your map data; if you are unable to achieve a legible map, or if you are measuring distance, you may need to use a more advanced GIS software, such as QGIS or ArcGIS Pro, which will allow you to specify the map projections. For more details on best practices for georeferencing, see [Esri’s list of recommendations](https://www.esri.com/esri-news/arcuser/spring-2014/~/media/Files/Pdfs/news/arcuser/0314/seven-best-practices.pdf).
 
-In this tutorial, you will work with Map Warper and ArcGIS Online to create a georeferenced historical map and overlay it on top of a modern basemap to be published and interacted with on the web. Developed by Tim Waters, [Map Warper](https://mapwarper.net) is an open-source georeferencing service, written in Ruby on Rails and lets users upload scanned maps and georeference them against OpenStreetMap. [ArcGIS Online](https://www.esri.com/en-us/arcgis/products/arcgis-online/overview) is a cloud-based mapping and analysis platform by Esri. You can use ArcGIS Online to create maps, analyze data, tell stories, and share maps online.
+In this tutorial, you will work with Map Warper and ArcGIS Online to create a georeferenced historical map and overlay it on top of a modern basemap to be published and interacted with on the web. Developed by Tim Waters, [Map Warper](https://mapwarper.net) is an open-source georeferencing service, written in Ruby on Rails and lets users upload scanned maps and georeference them against OpenStreetMap. [ArcGIS Online](https://www.esri.com/en-us/arcgis/products/arcgis-online/overview) is a cloud-based mapping and web analysis platform by Esri. You can use ArcGIS Online to create maps, analyze data, tell stories, and share maps online.
 
-# Getting Started: Georeferencing your map with MapWarper.net
-*You will start by uploading a map and georeferencing it using the open source online tool Map Warper. Map Warper has a variety of export options, including WMS URL and a GeoTIFF or KML file. For the purposes of this tutorial we will export the georeferenced map as map tiles and load it into to ArcGIS Online.*
+# Getting Started: Georeferencing your map with Map Warper
+*You will start by uploading a map and georeferencing it using the open source online tool Map Warper. Map Warper has a variety of export options, including WMS URL, Tiles, and a GeoTIFF or KML file. For the purposes of this tutorial we will export the georeferenced map as Tile layer and load it into to ArcGIS Online.*
 
 ## Step 1: Set up Map Warper and upload your map
 
-1. In this tutorial we will use an [1860 map of North Carolina](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-South-Carolina-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=7&trs=18) from the David Rumsey Map Collection. Download the Extra-Extra Large version.
+1. For this tutorial, we will use an [1860 map of North Carolina](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-South-Carolina-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=7&trs=18) from the David Rumsey Map Collection. Export and download the Extra-Extra Large version.
 
-  * Note: Every filename in Map Warper must be unique, so you will need to give the image a new file name, such as North_Carolina_yourlastname.jpg.
+  * Note: Every filename in Map Warper must be unique, so you will need to give the image a new file name once you have downloaded the map to your computer, such as North_Carolina_yourlastname.jpg.
 
 2. Go to [https://mapwarper.net](https://mapwarper.net) and create an account.
 
@@ -31,7 +31,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 ![](images/mapwarper_metadata.png)
 
-5. Towards the bottom of the screen, click the Choose File button under “Upload an image file.” Navigate to the North_Carolina.jpg map that you downloaded to your computer and click Create.
+5. Towards the bottom of the screen, click on the Choose File button under “Upload an image file.” Navigate to the North_Carolina.jpg map that you downloaded to your computer and click Create.
 
 ![](images/mapwarper_create.png)
 
@@ -52,18 +52,18 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 2. Click on the Rectify tab
 
-3. Take a moment to move the map on the right to the North Carolina region. The arrows at the top of the screen move the map slightly to the North, South, East, and West and are useful when you need to make small adjustments to the map. You can zoom with the slider or with your trackpad/mouse.
+3. Take a moment to move the map on the right to the North Carolina region. The arrows at the top of the screen move the map slightly to the North, South, East, and West and are useful when you need to make small adjustments to the map. You can zoom in and out with the slider or with your trackpad/mouse.
 
 ![](images/mapwarperzoom.png)
 
 * To move around a map, click the hand icon.
-* To add a control point, you will click the green location marker and click the place on the map where you want it to go. Note: The control point will not be permanently selected until you click the "Add Control Point" button below the maps.
+* To add a control point, you will click the green control point marker and click the place on the map where you want it to go. Note: The control point will not be permanently selected until you click the "Add Control Point" button below the maps.
 
 ![](images/mapwarper_tools.png)
 
-4. Once you feel comfortable moving around in the maps, select your first control point. Start from the historic map and choose a location--for example, a city--that will be relatively easy to find on the modern map.
+4. Once you feel comfortable moving around in the maps, select your first control point. Start from the historic map and choose a location--for example, a city--that will be relatively easy to find.
 
-5. Then, click the green marker on the modern map and find the same location.
+5. Then, click the green control point marker on the modern map and find the same location to match them up.
 
 ![](images/mapwarper_controlpointsadded.png)
 
@@ -71,13 +71,13 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 ![](images/mapwarper_addcontrolpoint.png)
 
-7. You need at least 4 or 5 points. Spread them out across your historic map--focusing on state borders and major cities is a good strategy.
+7. You need at least 4 or 5 points. Spread them out across your historic map--focusing on state borders, rivers, and major cities is a good strategy.
 
-8. If you need to delete a control point, click on “Control Points” in the Control Panel below the map.Selecting Control Points will display all of the points you have added, and enable you to delete any points that you want to re-do. You also have the option of changing the latitude and longitude manually.
+8. If you need to delete a control point, click on “Control Points” in the Control Panel below the map. Selecting Control Points will display all of the points you have added, and enable you to delete any points that you want to re-do. You also have the option of changing the latitude and longitude manually.
 
 ![](images/mapwarper_controlpoints.png)
 
-*Note: There is an  Error value for each control point. Map Warper uses the Root Mean Square error calculation (RMS) to evaluate the transformation of the different control points. The RMS error provides a rough guide to how consistent your control points are to one another with reference to the map and assesses how distorted your map will be. High RMS error values indicate that your control points are less consistent with one another in comparison to a low RMS error value. It is generally recommended that you keep your error values low and replace or remove control points with high values. While the RMS error provides a good way to assess the transformation's accuracy, you should always reevaluate how well your image maps up to the GIS map. For more information about the RMS error, please see Esri's section on interpreting the root mean square error in their [Overview of georeferencing](https://pro.arcgis.com/en/pro-app/help/data/imagery/overview-of-georeferencing.htm#ESRI_SECTION1_61F70AE3AC6C47559B3C03C74F093505)*
+*Note: Under "Control Points," you will see there is an  Error value for each control point. Map Warper uses the Root Mean Square error calculation (RMS) to evaluate the transformation of the different control points. The RMS error provides a rough guide to how consistent your control points are to one another with reference to the map's transformation and it assesses how distorted your map will be. High RMS error values indicate that your control points are less consistent with one another in comparison to a low RMS error value. It is generally recommended that you keep your error values low and replace or remove control points with high values. While the RMS error provides a good way to assess the transformation's accuracy, you should always reevaluate how well your scanned map matches up to the GIS modern map. For more information about the RMS error, please see Esri's section on interpreting the root mean square error in their [Overview of georeferencing](https://pro.arcgis.com/en/pro-app/help/data/imagery/overview-of-georeferencing.htm#ESRI_SECTION1_61F70AE3AC6C47559B3C03C74F093505)*
 
 10. When you have enough points and think they are distributed well across your historic map, click Warp Image! at the bottom of the page. Georeferencing maps takes practice. You may find that your rectified map creates an unreadable warped map. We encourage you to try steps 7-9 again, taking into account best practices for georeferencing mentioned above, such as identifying major cities, roads, streams, and rivers that you can identify with confidence.
 
@@ -89,19 +89,21 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 ![](images/mapwarper_satellite.png)
 
-14. Click the Preview tab for a larger view of the georeferenced map. Changing the opacity can give you a sense of how accurate your georeferencing is.
+14. Click the Preview tab for a larger view of the georeferenced map. Changing the transparency using the slider can give you a sense of how accurate your georeferencing is.
 
 ![](images/mapwarper_preview.png)
 
 ## Step 4: Export your map
 
-16. Click the Export tab
+16. We are now ready to export our map.  Click the Export tab
 
 ![](images/mapwarper_export.png)
 
 17. Under Map Services, copy and paste the Tiles URL and save it to be used later in ArcGIS Online. The URL Link should look similar to the following URL:
 
 https://mapwarper.net/maps/tile/40210/{z}/{x}/{y}.png
+
+*Note:*
 
 # Displaying your georeferenced map in ArcGIS Online
 

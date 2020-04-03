@@ -19,19 +19,19 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 ## Step 1: Set up Map Warper and upload your map
 
-1. For this tutorial, we will use an [1860 map of North Carolina](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-South-Carolina-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=7&trs=18) from the David Rumsey Map Collection. Export and download the Extra-Extra Large version.
+1. For this tutorial, we will use an [1860 map of North Carolina and South Carolina](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-South-Carolina-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=7&trs=18) from the David Rumsey Map Collection. Export and download the Extra-Extra Large version.
 
-  * Note: Every filename in Map Warper must be unique, so you will need to give the image a new file name once you have downloaded the map to your computer, such as North_Carolina_yourlastname.jpg.
+  * Note: Every filename in Map Warper must be unique, so you will need to give the image a new file name once you have downloaded the map to your computer, such as NC_SC_Map_yourlastname.jpg.
 
 2. Go to [https://mapwarper.net](https://mapwarper.net) and create an account.
 
 3. On the Home page, click the green button labeled Upload Map to import your scanned map to Map Warper.
 
-4. The next screen is asking for descriptive information that will make the map easier to find (also known as metadata). While only the Title field is required, it is generally best practice to provide as much information as possible, so other users can learn more about the source of your scanned map you are georeferencing. Fill in the metadata based on the information provided to you about the historical map that you’re working with. For the North Carolina map, you can find the map’s metadata below the image on the [North Carolina Maps collection site](https://dc.lib.unc.edu/cdm/singleitem/collection/ncmaps/id/174/rec/4).
+4. The next screen is asking for descriptive information that will make the map easier to find (also known as metadata). While only the Title field is required, it is generally best practice to provide as much information as possible, so other users can learn more about the source of your scanned map you are georeferencing. Fill in the metadata based on the information provided to you about the historical map that you’re working with. For the North Carolina and South Carolina map, you can find the map’s metadata beside the map on the David Rumsey Map Collection's website (https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-South-Carolina-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=7&trs=18).
 
 ![](images/mapwarper_metadata.png)
 
-5. Towards the bottom of the screen, click on the Choose File button under “Upload an image file.” Navigate to the North_Carolina.jpg map that you downloaded to your computer and click Create.
+5. Towards the bottom of the screen, click on the Choose File button under “Upload an image file.” Navigate to the NC_SC.jpg map that you downloaded to your computer and click Create.
 
 ![](images/mapwarper_create.png)
 
@@ -52,7 +52,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 2. Click on the Rectify tab
 
-3. Take a moment to move the map on the right to the North Carolina region. The arrows at the top of the screen move the map slightly to the North, South, East, and West and are useful when you need to make small adjustments to the map. You can zoom in and out with the slider or with your trackpad/mouse.
+3. Take a moment to move the map on the right to the North Carolina and South Carolina region. The arrows at the top of the screen move the map slightly to the North, South, East, and West and are useful when you need to make small adjustments to the map. You can zoom in and out with the slider or with your trackpad/mouse.
 
 ![](images/mapwarperzoom.png)
 
@@ -83,6 +83,8 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 10. When you have enough points and think they are distributed well across your historic map, click Warp Image! at the bottom of the page. Georeferencing maps takes practice. You may find that your rectified map creates an unreadable warped map. We encourage you to try steps 7-9 again, taking into account best practices for georeferencing mentioned above, such as identifying major cities, roads, streams, and rivers that you can identify with confidence.
 
+![](images/mapwarper_warpbutton.png)
+
 11. You will now see the map layered on top of the OpenStreetMap.
 
 ![](images/mapwarper_openstreetmap.png)
@@ -103,7 +105,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 17. Under Map Services, copy and paste the Tiles URL and save it to be used later in ArcGIS Online. The URL Link should look similar to the following URL:
 
-https://mapwarper.net/maps/tile/40210/{z}/{x}/{y}.png
+https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
 
 *Note:*
 
@@ -123,16 +125,47 @@ https://mapwarper.net/maps/tile/40210/{z}/{x}/{y}.png
 
 ![](images/arcgis_addlayerfromweb.png)
 
-4. Choose ""
+4. In the dropdown menu under the question, "What type of data you are referencing?," select A Tile Layer.
 
-Enter the URL you copied from MapWarper, but change the end of the url from /{z}/{x}/{y}.png to /{level}/{col}/{row}.png. It will look like this:
+![](images/arcgis_tilelayer.png)
 
-https://mapwarper.net/maps/tile/39452/{level}/{col}/{row}.jpg
+5. You will be notified by ArcGIS Online that the tile layer URL must contain the level, column, and row placeholders. You will need to enter the URL you copied from Map Warper's Export Tab and change the end of the url from /{z}/{x}/{y}.png to /{level}/{col}/{row}.png. The new URL should look like:
 
+https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 
-5. In the URL field, enter the Integration URL you copied from Mapbox.  In the Title and Credits, you will enter your own information. For example, Title: “North Carolina 1829” and Credits: “Georeferenced by [your name here]”. Click "Add Layer"
-{% include figure.html filename="images/georeferenceMaps/arcGIS_tileInfo.png" caption="Tile and Credits are required fields when adding a tile layer" %}
-6. Save your map. Add your title and at least one tag (example: ‘North Carolina’). Save.
-7. Your Georeferenced Map in ArcGIS online should look like the following image. If you want to make your map more transparent, go back into Mapbox and click on your georeferenced map layer, and adjust the "Raster opacity."
-{% include figure.html filename="images/georeferenceMaps/arcGIS_georeferenced.png" caption="Zoom in to see your georeferenced map." %}
-8. Click Share in the top menu above the map. Maps created in public accounts can remain private, or be shared with "Everyone (public)". Once you choose to share with Everyone, you will be able to click "Embed in Website" to get HTML code for embedding your map, or you can ‘Create a Web App’ to use one of ArcGIS Online’s templates for viewing and analyzing geographic data, including Story Maps.
+6. In the URL field, enter the Tile URL you copied from the export tab in Map Warper.  In the Title and Credits, you will enter your own title for this layer. For example, Title: “North Carolina and South Carolina Map 1860” and Credits: “Georeferenced Historic North Carolina 1860 map by [your name here]”. Now click "Add Layer."
+
+![](images/arcgis_urltitlecredits.png)
+
+7. Save your map. Add your title and at least one tag (example: ‘North Carolina’,
+'South Carolina'). Save.
+
+![](images/arcgis_savemap.png)
+
+8. You can now zoom to the North Carolina and South Carolina region and see your Georeferenced Map layered on top of a basemap in ArcGIS Online.
+
+![](images/arcgis_georeferencedmap.png)
+
+9. If you want to make your map more transparent, click on the tile layer you just added to ArcGIS Online under Contents and select the blue ellipses dots. In the drop-down menu, select Transparency and adjust the transparency of your georeferenced map using the opacity slider.
+
+![](images/arcgis_transparency.png)
+
+10. Once you are done adjusting the transparency of your georeferencd map, click on the Share button in the top menu above the map.
+
+![](images/arcgis_sharepublic.png)
+
+![](images/arcgis_transparentmap.png)
+
+11. Maps created in public accounts can remain private, or be shared with "Everyone (public)". Once you choose to share with Everyone, you will be able to click "Embed in Website" to get HTML code for embedding your map on other other web platforms.
+
+![](images/arcgis_embedwebsite.png)
+
+![](images/arcgis_embed.png)
+
+12. You can also select ‘Create a Web App’ to load your georeferenced map into one of ArcGIS Online’s applications, such as Esri's Story Maps.
+
+![](arcgis_createawebapp.png)
+
+13. Esri Story Maps offers a variety of templates for you to add images, text, and other media items in order to create and publish geographic stories online.
+
+![](arcgis_buildastorymap.png)

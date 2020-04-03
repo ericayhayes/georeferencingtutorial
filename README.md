@@ -24,20 +24,27 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
   * Note: Every filename in Map Warper must be unique, so you will need to give the image a new file name once you have downloaded the map to your computer, such as NC_SC_Map_yourlastname.jpg.
 
+
 2. Go to [https://mapwarper.net](https://mapwarper.net) and create an account.
+
 
 3. On the Home page, click the green button labeled Upload Map to import your scanned map to Map Warper.
 
+
 4. The next screen is asking for descriptive information that will make the map easier to find (also known as metadata). While only the Title field is required, it is generally best practice to provide as much information as possible, so other users can learn more about the source of your scanned map you are georeferencing. Fill in the metadata based on the information provided to you about the historical map that you’re working with. For the North Carolina and South Carolina map, you can find the map’s metadata beside the map on the [David Rumsey Map Collection's website](https://bit.ly/3464cFd).
+
 
 ![](images/mapwarper_metadata.png)
 *Fig. 2: Map Warper metadata*
 
+
 5. Towards the bottom of the screen, click on the Choose File button under “Upload an image file.” Navigate to the NC_SC.jpg map that you downloaded to your computer and click Create.
+
 
 ![](images/mapwarper_create.png)
 
 *Fig. 3: Map Warper upload an image and create*
+
 
 ## Step 2: Explore the Map Warper Interface
 
@@ -50,25 +57,35 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
   * Preview: shows your map on top of a modern basemap
   * Export: gives you a variety of export options and formats
 
+
 ![](images/mapwarper_showmap.png)
 *Fig. 4: Map Warper interface*
+
 
 ## Step 3: Georeference your map
 
 2. Click on the Rectify tab
 
+
 3. Take a moment to move the map on the right to the North Carolina and South Carolina region. The arrows at the top of the screen move the map slightly to the North, South, East, and West and are useful when you need to make small adjustments to the map. You can zoom in and out with the slider or with your trackpad/mouse.
 
+
 ![](images/mapwarperzoom.png)
+
 *Fig. 5: Map Warper zoom in and out*
+
 
 * To move around a map, click the hand icon.
 * To add a control point, you will click the green control point marker and click the place on the map where you want it to go. Note: The control point will not be permanently selected until you click the "Add Control Point" button below the maps.
 
+
 ![](images/mapwarper_tools.png)
+
 *Fig. 6: Use the tools on the Rectify screen to pan, zoom, and add control points to your map*
 
+
 4. Once you feel comfortable moving around in the maps, select your first control point. Start from the historic map and choose a location--for example, a city--that will be relatively easy to find.
+
 
 5. Then, click the green control point marker on the modern map and find the same location to match them up.
 
@@ -78,11 +95,13 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 6. Click the Add Control Point button. Note: If you do not click the Add Control Point button, the next time you click on a map, the control point you added will move. This functionality gives you the flexibility to adjust your points while adding them, but can be confusing if you don’t realize that your point has moved because you didn’t click Add Control Point.
 
 ![](images/mapwarper_addcontrolpoint.png)
+
 *Fig. 8: Click the Add Control Point button*
 
 7. You need at least 4 or 5 points. Spread them out across your historic map--focusing on state borders, rivers, and major cities is a good strategy. If you need to delete a control point, click on “Control Points” in the Control Panel below the map.
 
 ![](images/mapwarper_controlpoints.png)
+
 *Fig. 9: Select Control Points in the Control panel*
 
 8. Selecting Control Points will display all of the points you have added, and enable you to delete any points that you want to re-do. You also have the option of changing the latitude and longitude manually.
@@ -117,6 +136,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 13. We are now ready to export our map.  Click the Export tab
 
 ![](images/mapwarper_export.png)
+
 *Fig 15: Map Warper Export*
 
 14. Under Map Services, copy and paste the Tiles URL and save it to be used later in ArcGIS Online. See the example URL below:
@@ -139,6 +159,7 @@ https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
 3. Click the Add drop-down menu and choose "Add layer from Web."
 
 ![](images/arcgis_addlayerfromweb.png)
+
 *Fig. 17: ArcGIS Online Add Layer*
 
 4. In the dropdown menu under the question, "What type of data you are referencing?," select A Tile Layer.

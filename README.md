@@ -28,7 +28,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 3. On the Home page, click the green button labeled Upload Map to import your scanned map to Map Warper.
 
-4. The next screen is asking for descriptive information that will make the map easier to find (also known as metadata). While only the Title field is required, it is generally best practice to provide as much information as possible, so other users can learn more about the source of your scanned map you are georeferencing. Fill in the metadata based on the information provided to you about the historical map that you’re working with. For the North Carolina and South Carolina map, you can find the map’s metadata beside the map on the David Rumsey Map Collection's website (https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-South-Carolina-?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=7&trs=18).
+4. The next screen is asking for descriptive information that will make the map easier to find (also known as metadata). While only the Title field is required, it is generally best practice to provide as much information as possible, so other users can learn more about the source of your scanned map you are georeferencing. Fill in the metadata based on the information provided to you about the historical map that you’re working with. For the North Carolina and South Carolina map, you can find the map’s metadata beside the map on the [David Rumsey Map Collection's website](https://bit.ly/3464cFd).
 
 ![](images/mapwarper_metadata.png)
 *Fig. 2: Map Warper metadata*

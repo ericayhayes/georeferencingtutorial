@@ -36,6 +36,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 5. Towards the bottom of the screen, click on the Choose File button under “Upload an image file.” Navigate to the NC_SC.jpg map that you downloaded to your computer and click Create.
 
 ![](images/mapwarper_create.png)
+
 *Fig. 3: Map Warper upload an image and create*
 
 ## Step 2: Explore the Map Warper Interface

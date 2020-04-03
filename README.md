@@ -20,7 +20,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 ## Step 1: Set up Map Warper and upload your map
 
-1. For this tutorial, we will use an [1860 map of North Carolina and South Carolina](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-SouthCarolina?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=7&trs=18) from the David Rumsey Map Collection. Export and download the Extra-Extra Large version.
+1. For this tutorial, we will use an [1860 map of North Carolina and South Carolina](https://bit.ly/3464cFd) from the David Rumsey Map Collection. Export and download the Extra-Extra Large version.
 
   * Note: Every filename in Map Warper must be unique, so you will need to give the image a new file name once you have downloaded the map to your computer, such as NC_SC_Map_yourlastname.jpg.
 

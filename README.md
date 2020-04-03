@@ -111,37 +111,49 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 *Note: You will see there is an  Error value for each control point. Map Warper uses the Root Mean Square error calculation (RMS) to evaluate the transformation of the different control points. The RMS error provides a rough guide to how consistent your control points are to one another with reference to the map's transformation and it assesses how distorted your map will be. High RMS error values indicate that your control points are less consistent with one another in comparison to a low RMS error value. It is generally recommended that you keep your error values low and replace or remove control points with high values. While the RMS error provides a good way to assess the transformation's accuracy, you should always reevaluate how well your scanned map matches up to the GIS modern map. For more information about the RMS error, please see Esri's section on interpreting the root mean square error in their [Overview of georeferencing](https://pro.arcgis.com/en/pro-app/help/data/imagery/overview-of-georeferencing.htm#ESRI_SECTION1_61F70AE3AC6C47559B3C03C74F093505)*
 
+
 9. When you have enough points and think they are distributed well across your historic map, click Warp Image! at the bottom of the page. Georeferencing maps takes practice. You may find that your rectified map creates an unreadable warped map. We encourage you to try steps 7-9 again, taking into account best practices for georeferencing mentioned above, such as identifying major cities, roads, streams, and rivers that you can identify with confidence.
+
 
 ![](images/mapwarper_warpbutton.png)
 *Fig. 11: Click Warp Image! to rectify your map*
 
+
 10. You will now see the map layered on top of the OpenStreetMap.
+
 
 ![](images/mapwarper_openstreetmap.png)
 *Fig. 12: "Georeferenced map in OpenStreetMap*
 
+
 11. You can choose to view a satellite image basemap or the regular OpenStreetMap layer we’ve been using.
+
 
 ![](images/mapwarper_satellite.png)
 *Fig 13: Georeferenced map in satellite view*
 
+
 12. Click the Preview tab for a larger view of the georeferenced map. Changing the transparency using the slider can give you a sense of how accurate your georeferencing is.
+
 
 ![](images/mapwarper_preview.png)
 *Fig 14: Map Warper Preview*
+
 
 ## Step 4: Export your map
 
 13. We are now ready to export our map.  Click the Export tab
 
+
 ![](images/mapwarper_export.png)
 
 *Fig 15: Map Warper Export*
 
+
 14. Under Map Services, copy and paste the Tiles URL and save it to be used later in ArcGIS Online. See the example URL below:
 
 https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
+
 
 # Displaying your georeferenced map in ArcGIS Online
 
@@ -151,10 +163,12 @@ https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
 
 1. Login to [ArcGIS Online](https://www.arcgis.com/index.html) and create a public account.
 
+
 2. Once you are logged in, click on Map. This will open a new, blank map.
 
 ![](images/arcgis_mapbutton.png)
 *Fig 16: ArcGIS Online Map view*
+
 
 3. Click the Add drop-down menu and choose "Add layer from Web."
 
@@ -162,19 +176,23 @@ https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
 
 *Fig. 17: ArcGIS Online Add Layer*
 
+
 4. In the dropdown menu under the question, "What type of data you are referencing?," select A Tile Layer.
 
 ![](images/arcgis_tilelayer.png)
 *Fig 18: ArcGIS Online Tile Layer*
 
+
 5. You will be notified by ArcGIS Online that the tile layer URL must contain the level, column, and row placeholders. You will need to enter the URL you copied from Map Warper's Export Tab and change the end of the url from /{z}/{x}/{y}.png to /{level}/{col}/{row}.png. The new URL should look like:
 
 https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
+
 
 6. In the URL field, enter the Tile URL you copied from the export tab in Map Warper.  In the Title and Credits, you will enter your own title for this layer. For example, Title: “North Carolina and South Carolina Map 1860” and Credits: “Georeferenced Historic North Carolina 1860 map by [your name here]”. Now click "Add Layer."
 
 ![](images/arcgis_urltitlecredits.png)
 *Fig 19: ArcGIS Online Tile Layer URL, Title, Credits*
+
 
 7. Save your map. Add your title and at least one tag (example: ‘North Carolina’,
 'South Carolina'). Save.
@@ -182,36 +200,44 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 ![](images/arcgis_savemap.png)
 *Fig 20: ArcGIS Online Save Map*
 
+
 8. You can now zoom to the North Carolina and South Carolina region and see your Georeferenced Map layered on top of a basemap in ArcGIS Online.
 
 ![](images/arcgis_georeferencedmap.png)
 *Fig 21: ArcGIS Online georeferenced map view*
+
 
 9. If you want to make your map more transparent, click on the tile layer you just added to ArcGIS Online under Contents and select the blue ellipses dots. In the drop-down menu, select Transparency and adjust the transparency of your georeferenced map using the opacity slider.
 
 ![](images/arcgis_transparency.png)
 *Fig 22: ArcGIS Online Setting the Transparency*
 
+
 10. Once you are done adjusting the transparency of your georeferencd map, click on the Share button in the top menu above the map.
 
 ![](images/arcgis_transparentmap.png)
 *Fig 23: ArcGIS Online transparent georeferenced map*
 
+
 ![](images/arcgis_sharepublic.png)
 *Fig 24: ArcGIS Online Share*
+
 
 11. Maps created in public accounts can remain private, or be shared with "Everyone (public)". Once you choose to share with Everyone, you will be able to click "Embed in Website" to get HTML code for embedding your map on other other web platforms.
 
 ![](images/arcgis_embedwebsite.png)
 *Fig 25: ArcGIS Online Embed in Website*
 
+
 ![](images/arcgis_embed.png)
 *Fig 26: ArcGIS Online Embed HTML code*
+
 
 12. You can also select ‘Create a Web App’ to load your georeferenced map into one of ArcGIS Online’s applications, such as Esri's Story Maps.
 
 ![](arcgis_createawebapp.png)
 *Fig. 27: ArcGIS Online Create a Web App*
+
 
 13. Esri Story Maps offers a variety of templates for you to add images, text, and other media items in order to create and publish geographic stories online.
 

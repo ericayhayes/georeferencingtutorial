@@ -61,15 +61,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 2. Click on the Rectify tab
 
 
-3. Take a moment to move the map on the right to the North Carolina and South Carolina region. The arrows at the top of the screen move the map slightly to the North, South, East, and West and are useful when you need to make small adjustments to the map. You can zoom in and out with the slider or with your trackpad/mouse.
-
-* To move around a map, click the hand icon.
-
-
-![](images/mapwarper_tools.png)
-
-**Fig. 3: Use the tools on the Rectify screen to pan, zoom, and add control points to your map**
-
+3. Take a moment to move the map on the right to the North Carolina and South Carolina region. The arrows at the top of the screen move the map slightly to the North, South, East, and West and are useful when you need to make small adjustments to the map. You can zoom in and out with the slider or with your trackpad/mouse. To move around a map, click the hand icon.
 
 4. Once you feel comfortable moving around in the maps, select your first control point. Start from the historic map and choose a location--for example, a city--that will be relatively easy to find.
 
@@ -78,19 +70,19 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 ![](images/mapwarper_controlpointsadded.png)
 
-**Fig. 4: Match up your control points**
+**Fig. 3: Match up your control points**
 
 6. If you do not click the Add Control Point button, the next time you click on a map, the control point you added will move. This functionality gives you the flexibility to adjust your points while adding them, but can be confusing if you don’t realize that your point has moved because you didn’t click Add Control Point.
 
 ![](images/mapwarper_addcontrolpoint.png)
 
-**Fig. 5: Click the Add Control Point button**
+**Fig. 4: Click the Add Control Point button**
 
 7. You need at least 4 or 5 points. Spread them out across your historic map--focusing on state borders, rivers, and major cities is a good strategy. If you need to delete a control point, click on “Control Points” in the Control Panel below the map.
 
 ![](images/mapwarper_controlpoints.png)
 
-**Fig. 6: Select Control Points in the Control panel**
+**Fig. 5: Select Control Points in the Control panel**
 
 8. Selecting Control Points will display all of the points you have added, and enable you to delete any points that you want to re-do. You also have the option of changing the latitude and longitude manually.
 

@@ -92,7 +92,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 6. If you do not click the Add Control Point button, the next time you click on a map, the control point you added will move. This functionality gives you the flexibility to adjust your points while adding them, but can be confusing if you don’t realize that your point has moved because you didn’t click Add Control Point.
 
-7. You need at least 4 or 5 points. Spread them out across your historic map--focusing on state borders, rivers, and major cities is a good strategy. If you need to delete a control point, click on “Control Points” in the Control Panel below the map.
+7. You need at least 4 or 5 points. Spread them out across your historic map--focusing on state borders, rivers, county lines, and major cities is a good strategy. If you need to delete a control point, click on “Control Points” in the Control Panel below the map.
 
 {% include figure.html filename="images/mapwarper_controlpoints.png" caption="Select Control Points in the Control panel" %}
 

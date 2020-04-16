@@ -8,6 +8,7 @@ Georeferencing is the process of assigning geographic coordinates to a scanned m
 
 Before you begin georeferencing a scanned map, it is important to understand the locations depicted on the map, as well as the context of the creation of the historic map itself. Not all historic maps are good candidates for georeferencing. There must be enough information on the map to allow you to confidently assign latitude and longitude coordinates to it or align it with a GIS map using physical features. Often, you will need to research the location of historic places and features that no longer exist, and make an informed decision in order to identify its proper placement. Some maps may not have enough geographic information, and may become so warped when georeferenced that they are illegible or inaccurate.
 
+
 ![](images/mapwarper_warped.png)
 **Fig. 1: A map too warped to be used effectively**
 
@@ -16,7 +17,7 @@ The scale, resolution, and projection of a scanned map are also important consid
 In this tutorial, you will work with Map Warper and ArcGIS Online to create a georeferenced historical map and overlay it on top of a modern basemap to be published and interacted with on the web. Developed by Tim Waters, [Map Warper](https://mapwarper.net) is an open-source georeferencing service, written in Ruby on Rails and lets users upload scanned maps and georeference them against OpenStreetMap. [ArcGIS Online](https://www.esri.com/en-us/arcgis/products/arcgis-online/overview) is a cloud-based mapping and web analysis platform by Esri. You can use ArcGIS Online to create maps, analyze data, tell stories, and share maps online.
 
 # Getting Started: Georeferencing your map with Map Warper
-*You will start by uploading a map and georeferencing it using the open source online tool Map Warper. Map Warper has a variety of export options, including WMS URL, Tiles, and a GeoTIFF or KML file. For the purposes of this tutorial we will export the georeferenced map as Tile layer and load it into to ArcGIS Online.*
+*You will start by uploading a map and georeferencing it using the open source online tool Map Warper. Map Warper has a variety of export options, including WMS URL, Tiles, and a GeoTIFF or KML file. For the purposes of this tutorial we will export the georeferenced map as a Tile layer and load it into to ArcGIS Online.*
 
 ## Step 1: Set up Map Warper and upload your map
 

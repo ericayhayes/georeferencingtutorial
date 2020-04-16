@@ -191,6 +191,6 @@ Once you choose to share with Everyone, you will be able to click "Embed in Webs
 
 {% include figure.html filename="images/arcgis_buildastorymap.png" caption="ArcGIS Online Web Application: Build a Story Map" %}
 
-# Final Thoughts
+# Conclusion
 
 You have now completed this lesson. Knowing how to georeference maps means you can bring historic cartography into the present context and allow for new explorations of historic data. We encourage you to think about the classroom applications for georeferencing, as it is a wonderful exercise for increasing student understanding of geographic, cartographic methods, and the role of space and place in historical thinking. In this lesson we have shown you how to publish your georeferenced map with ArcGIS Online, but you can also do so using [MapBox](https://www.mapbox.com/), or create your own custom maps using [Leaflet](https://leafletjs.com/).

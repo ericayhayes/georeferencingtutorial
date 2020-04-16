@@ -10,6 +10,7 @@ Before you begin georeferencing a scanned map, it is important to understand the
 
 
 ![](images/mapwarper_warped.png)
+
 **Fig. 1: A map too warped to be used effectively**
 
 The scale, resolution, and projection of a scanned map are also important considerations when choosing a historic map to georeference. Small scale maps are generally not well suited for highly detailed georeferencing and may cause problems with representing exact feature locations. When selecting or scanning a historic map for georeferencing, it is better to use a map that has been scanned at a high resolution (300 dpi or greater), so you can easily see the features on the map when zooming in and out. It is also best practice to use the same projection as the historic map in order to minimize distortion. Georeferencing a map in the wrong projection can create a mismatch between your historical and current maps, stretching the lines, shapes, and the distance between objects. Map Warper, the tool used in this tutorial, does not provide an option to re-project your map data; if you are unable to achieve a legible map, or if you are measuring distance, you may need to use a more advanced GIS software, such as QGIS or ArcGIS Pro, which will allow you to specify the map projections. For more details on best practices for georeferencing, see [Esri’s list of recommendations](https://www.esri.com/esri-news/arcuser/spring-2014/~/media/Files/Pdfs/news/arcuser/0314/seven-best-practices.pdf).
@@ -51,6 +52,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 
 ![](images/mapwarper_showmap.png)
+
 **Fig. 2: Map Warper interface**
 
 
@@ -65,6 +67,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 
 ![](images/mapwarper_tools.png)
+
 **Fig. 3: Use the tools on the Rectify screen to pan, zoom, and add control points to your map**
 
 
@@ -74,11 +77,13 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 5. Then, click the green control point marker on the modern map and find the same location to match them up.
 
 ![](images/mapwarper_controlpointsadded.png)
+
 **Fig. 4: Match up your control points**
 
 6. If you do not click the Add Control Point button, the next time you click on a map, the control point you added will move. This functionality gives you the flexibility to adjust your points while adding them, but can be confusing if you don’t realize that your point has moved because you didn’t click Add Control Point.
 
 ![](images/mapwarper_addcontrolpoint.png)
+
 **Fig. 5: Click the Add Control Point button**
 
 7. You need at least 4 or 5 points. Spread them out across your historic map--focusing on state borders, rivers, and major cities is a good strategy. If you need to delete a control point, click on “Control Points” in the Control Panel below the map.
@@ -99,6 +104,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 
 ![](images/mapwarper_warpbutton.png)
+
 **Fig. 8: Click Warp Image! to rectify your map**
 
 
@@ -106,6 +112,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 
 ![](images/mapwarper_openstreetmap.png)
+
 **Fig. 9: "Georeferenced map in OpenStreetMap**
 
 
@@ -113,6 +120,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 
 ![](images/mapwarper_satellite.png)
+
 **Fig 10: Georeferenced map in satellite view**
 
 
@@ -120,6 +128,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 
 
 ![](images/mapwarper_preview.png)
+
 **Fig 11: Map Warper Preview**
 
 
@@ -135,7 +144,7 @@ https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
 
 # Displaying your georeferenced map in ArcGIS Online
 
-**We will now move on to loading our georeferenced map into ArcGIS Online.**
+*We will now move on to loading our georeferenced map into ArcGIS Online.*
 
 ## Step 1: Create an ArcGIS Online account
 
@@ -145,6 +154,7 @@ https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
 2. Once you are logged in, click on Map. This will open a new, blank map.
 
 ![](images/arcgis_mapbutton.png)
+
 **Fig 12: ArcGIS Online Map view**
 
 
@@ -158,6 +168,7 @@ https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
 4. In the dropdown menu under the question, "What type of data you are referencing?," select A Tile Layer.
 
 ![](images/arcgis_tilelayer.png)
+
 **Fig 14: ArcGIS Online Tile Layer**
 
 
@@ -169,6 +180,7 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 6. In the URL field, enter the Tile URL you copied from the export tab in Map Warper.  In the Title and Credits, you will enter your own title for this layer. For example, Title: “North Carolina and South Carolina Map 1860” and Credits: “Georeferenced Historic North Carolina 1860 map by [your name here]”. Now click "Add Layer."
 
 ![](images/arcgis_urltitlecredits.png)
+
 **Fig 15: ArcGIS Online Tile Layer URL, Title, Credits**
 
 
@@ -176,50 +188,59 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 'South Carolina'). Save.
 
 ![](images/arcgis_savemap.png)
+
 **Fig 16: ArcGIS Online Save Map**
 
 
 8. You can now zoom to the North Carolina and South Carolina region and see your Georeferenced Map layered on top of a basemap in ArcGIS Online.
 
 ![](images/arcgis_georeferencedmap.png)
+
 **Fig 17: ArcGIS Online georeferenced map view**
 
 
 9. If you want to make your map more transparent, click on the tile layer you just added to ArcGIS Online under Contents and select the blue ellipses dots. In the drop-down menu, select Transparency and adjust the transparency of your georeferenced map using the opacity slider.
 
 ![](images/arcgis_transparency.png)
+
 **Fig 18: ArcGIS Online Setting the Transparency**
 
 
 10. Once you are done adjusting the transparency of your georeferencd map, click on the Share button in the top menu above the map.
 
 ![](images/arcgis_transparentmap.png)
+
 **Fig 19: ArcGIS Online transparent georeferenced map**
 
 
 ![](images/arcgis_sharepublic.png)
+
 **Fig 20: ArcGIS Online Share**
 
 
 11. Maps created in public accounts can remain private, or be shared with "Everyone (public)". Once you choose to share with Everyone, you will be able to click "Embed in Website" to get HTML code for embedding your map on other other web platforms.
 
 ![](images/arcgis_embedwebsite.png)
+
 **Fig 21: ArcGIS Online Embed in Website**
 
 
 ![](images/arcgis_embed.png)
+
 **Fig 22: ArcGIS Online Embed HTML code**
 
 
 12. You can also select ‘Create a Web App’ to load your georeferenced map into one of ArcGIS Online’s applications, such as Esri's Story Maps.
 
 ![](images/arcgis_createawebapp.png)
+
 **Fig. 23: ArcGIS Online Create a Web App**
 
 
 13. Esri Story Maps offers a variety of templates for you to add images, text, and other media items in order to create and publish geographic stories online.
 
 ![](images/arcgis_buildastorymap.png)
+
 **Fig. 24: ArcGIS Online Web Application: Build a Story Map**
 
 # Final Thoughts

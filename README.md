@@ -84,6 +84,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 7. You need at least 4 or 5 points. Spread them out across your historic map--focusing on state borders, rivers, and major cities is a good strategy. If you need to delete a control point, click on “Control Points” in the Control Panel below the map.
 
 ![](images/mapwarper_controlpoints.png)
+
 **Fig. 6: Select Control Points in the Control panel**
 
 8. Selecting Control Points will display all of the points you have added, and enable you to delete any points that you want to re-do. You also have the option of changing the latitude and longitude manually.

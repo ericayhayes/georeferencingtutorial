@@ -171,7 +171,7 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 
 {% include figure.html filename="images/arcgis_transparentmap.png" caption="ArcGIS Online transparent georeferenced map" %}
 
-Once you are done adjusting the transparency of your georeferencd map, click on the Share button in the top menu above the map.
+Once you are done adjusting the transparency of your georeferencd map, click on the Share button in the top menu above the map, then click Done.
 
 {% include figure.html filename="images/arcgis_sharepublic.png" caption="ArcGIS Online Share" %}
 

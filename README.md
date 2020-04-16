@@ -220,7 +220,7 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 
 **Fig 17: ArcGIS Online transparent georeferenced map**
 
-Once you are done adjusting the transparency of your georeferencd map, click on the Share button in the top menu above the map.
+Once you are done adjusting the transparency of your georeferencd map, click on the Share button in the top menu above the map, then click Done.
 
 ![](images/arcgis_sharepublic.png)
 

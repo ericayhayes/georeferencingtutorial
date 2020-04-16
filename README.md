@@ -112,7 +112,7 @@ In this tutorial, you will work with Map Warper and ArcGIS Online to create a ge
 **Fig 8: Georeferenced map in satellite view**
 
 
-12. Click the Preview tab for a larger view of the georeferenced map. Changing the transparency using the slider can give you a sense of how accurate your georeferencing is.
+12. Click the Preview tab for a larger view of the georeferenced map. Changing the transparency using the slider can give you a sense of how accurate your georeferencing has been applied.
 
 
 ![](images/mapwarper_preview.png)
@@ -213,28 +213,28 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 
 
 
-10. Once you are done adjusting the transparency of your georeferencd map, click on the Share button in the top menu above the map.
+10. You will now see your transparent map in ArcGIS Online.
 
 
 ![](images/arcgis_transparentmap.png)
 
 **Fig 17: ArcGIS Online transparent georeferenced map**
 
+Once you are done adjusting the transparency of your georeferencd map, click on the Share button in the top menu above the map.
 
 ![](images/arcgis_sharepublic.png)
 
 **Fig 18: ArcGIS Online Share**
 
 
-
-
-11. Maps created in public accounts can remain private, or be shared with "Everyone (public)". Once you choose to share with Everyone, you will be able to click "Embed in Website" to get HTML code for embedding your map on other other web platforms.
+11. Maps created in public accounts can remain private, or be shared with "Everyone (public)".
 
 
 ![](images/arcgis_embedwebsite.png)
 
 **Fig 19: ArcGIS Online Embed in Website**
 
+Once you choose to share with Everyone, you will be able to click "Embed in Website" to get HTML code for embedding your map on other other web platforms.
 
 ![](images/arcgis_embed.png)
 

@@ -153,6 +153,7 @@ https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
 **Fig. 11: ArcGIS Online Add Layer**
 
 
+
 4. In the dropdown menu under the question, "What type of data you are referencing?," select A Tile Layer.
 
 ![](images/arcgis_tilelayer.png)
@@ -160,9 +161,13 @@ https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
 **Fig 12: ArcGIS Online Tile Layer**
 
 
+
+
 5. You will be notified by ArcGIS Online that the tile layer URL must contain the level, column, and row placeholders. You will need to enter the URL you copied from Map Warper's Export Tab and change the end of the url from /{z}/{x}/{y}.png to /{level}/{col}/{row}.png. The new URL should look like:
 
 https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
+
+
 
 
 6. In the URL field, enter the Tile URL you copied from the export tab in Map Warper.  In the Title and Credits, you will enter your own title for this layer. For example, Title: “North Carolina and South Carolina Map 1860” and Credits: “Georeferenced Historic North Carolina 1860 map by [your name here]”. Now click "Add Layer."
@@ -170,6 +175,8 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 ![](images/arcgis_urltitlecredits.png)
 
 **Fig 13: ArcGIS Online Tile Layer URL, Title, Credits**
+
+
 
 
 7. Save your map. Add your title and at least one tag (example: ‘North Carolina’,
@@ -180,6 +187,8 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 **Fig 14: ArcGIS Online Save Map**
 
 
+
+
 8. You can now zoom to the North Carolina and South Carolina region and see your Georeferenced Map layered on top of a basemap in ArcGIS Online.
 
 ![](images/arcgis_georeferencedmap.png)
@@ -187,11 +196,15 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 **Fig 15: ArcGIS Online georeferenced map view**
 
 
+
+
 9. If you want to make your map more transparent, click on the tile layer you just added to ArcGIS Online under Contents and select the blue ellipses dots. In the drop-down menu, select Transparency and adjust the transparency of your georeferenced map using the opacity slider.
 
 ![](images/arcgis_transparency.png)
 
 **Fig 16: ArcGIS Online Setting the Transparency**
+
+
 
 
 10. Once you are done adjusting the transparency of your georeferencd map, click on the Share button in the top menu above the map.
@@ -206,6 +219,8 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 **Fig 18: ArcGIS Online Share**
 
 
+
+
 11. Maps created in public accounts can remain private, or be shared with "Everyone (public)". Once you choose to share with Everyone, you will be able to click "Embed in Website" to get HTML code for embedding your map on other other web platforms.
 
 ![](images/arcgis_embedwebsite.png)
@@ -218,6 +233,8 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 **Fig 20: ArcGIS Online Embed HTML code**
 
 
+
+
 12. You can also select ‘Create a Web App’ to load your georeferenced map into one of ArcGIS Online’s applications, such as Esri's Story Maps.
 
 ![](images/arcgis_createawebapp.png)
@@ -225,11 +242,15 @@ https://mapwarper.net/maps/tile/40217/{level}/{col}/{row}.png
 **Fig. 21: ArcGIS Online Create a Web App**
 
 
+
+
 13. Esri Story Maps offers a variety of templates for you to add images, text, and other media items in order to create and publish geographic stories online.
 
 ![](images/arcgis_buildastorymap.png)
 
 **Fig. 22: ArcGIS Online Web Application: Build a Story Map**
+
+
 
 # Final Thoughts
 

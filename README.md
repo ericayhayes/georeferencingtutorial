@@ -16,9 +16,9 @@ Georeferenced maps provide an opportunity to contextualize historic data. When p
 
 7. Learning Outcomes (between 2-3)
 
-  _Users will learn how to georeference a historical map._
-  _Users will learn how to bring their georeferenced map into the online mapping platform, ArcGIS Online_
-  _Users will learn best practices for georeferencing and applying control points to a digitized historical map._
+  1. Users will learn how to georeference a historical map.
+  2. Users will learn how to bring their georeferenced map into the online mapping platform, ArcGIS Online
+  3. Users will learn best practices for georeferencing and applying control points to a digitized historical map.
 
 8. Research Phase most relevant to your lesson (delete as appropriate):
 Transform / Analyze / Present

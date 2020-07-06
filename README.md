@@ -20,7 +20,7 @@ In this tutorial, you will work with Map Warper and StoryMap JS to create a geor
 
 ## Step 1: Set up Map Warper and upload your map
 
-1. For this tutorial, we will use an [1860 map of North Carolina and South Carolina](https://bit.ly/3464cFd) from the David Rumsey Map Collection.[^1] Export and download the Extra-Extra Large version.
+1. For this tutorial, we will use an [1860 map of North Carolina and South Carolina](https://bit.ly/3464cFd) from the David Rumsey Map Collection.<sup id="a1">[1](#f1)</sup> Export and download the Extra-Extra Large version.
 
   *Note: Every filename in Map Warper must be unique, so you will need to give the image a new file name once you have downloaded the map to your computer, such as NC_SC_Map_yourlastname.jpg.*
 
@@ -193,4 +193,4 @@ You have now completed this lesson. Knowing how to georeference maps means you c
 
 # Endnotes
 
-[^1]: Johnson, A.J. Johnson’s North and South Carolina by Johnson & Browning. No 26-27. Map. New York: Johnson and Browning. From David Rumsey Center, Historical Map Collection. [https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-SouthCarolina?sort=Pub_List_No_InitialSort,Pub_Date,Pub_List_No,Series_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort,Pub_Date,Pub_List_No,Series_No;lc:RUMSEY~8~1&mi=7&trs=18](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-SouthCarolina?sort=Pub_List_No_InitialSort,Pub_Date,Pub_List_No,Series_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort,Pub_Date,Pub_List_No,Series_No;lc:RUMSEY~8~1&mi=7&trs=18) (accessed June 29, 2020).
+<b id="f1">1</b> Johnson, A.J. Johnson’s North and South Carolina by Johnson & Browning. No 26-27. Map. New York: Johnson and Browning. From David Rumsey Center, Historical Map Collection. [https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-SouthCarolina?sort=Pub_List_No_InitialSort,Pub_Date,Pub_List_No,Series_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort,Pub_Date,Pub_List_No,Series_No;lc:RUMSEY~8~1&mi=7&trs=18](https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~2505~310017:North-And-SouthCarolina?sort=Pub_List_No_InitialSort,Pub_Date,Pub_List_No,Series_No&qvq=q:1860%20North%20Carolina;sort:Pub_List_No_InitialSort,Pub_Date,Pub_List_No,Series_No;lc:RUMSEY~8~1&mi=7&trs=18) (accessed June 29, 2020).[↩](#a1)

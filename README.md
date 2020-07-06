@@ -140,29 +140,29 @@ https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
 
 2. You will be prompted to login with a google account.  If you don’t have one, you can create one at [gmail.com](http://gmail.com).
 
-![](StoryMapJS_GoogleSignin.png)
+![](images/StoryMapJS_GoogleSignin.png)
 **Fig 11: StoryMap JS: Sign In with Google**
 
 3. Type in a title for your story map and click "Create."
 
-![](StoryMapJS_Title_Create.png)
+![](images/StoryMapJS_Title_Create.png)
 **Fig 12: StoryMap JS: Add a title and click Create.**
 
 ## Step 2: Adding your georeferenced map to Story Map JS
 
 You will see a default black and white basemap in StoryMap JS. You will want to change out this basemap layer with your georeferenced historical map of North Carolina. To change the default basemap layer, select Options in the top left hand corner of the Story Map JS interface.
 
-![](StoryMapJS_Default_Options.png)
+![](images/StoryMapJS_Default_Options.png)
 **Fig 13: StoryMap JS: Options**
 
 In the drop down menu under Map Type, scroll down to “custom” and enter the Tiles URL: https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png from your exported map in Map Warper to load in your georeferenced map.
 
-![](StoryMapJS_MapType_Custom.png)
+![](images/StoryMapJS_MapType_Custom.png)
 **Fig 14: StoryMap JS: Map Type and custom URL**
 
 Upon loading the georeferenced map into StoryMap JS, you will notice that the georeferenced map repeats and is tiny--what you’re seeing is the “tiled” effect of importing a tile layer that covers only a small portion of the globe.
 
-![](StoryMapJS_TileLayer.png)
+![](images/StoryMapJS_TileLayer.png)
 **Fig 15: Imported tile layer of georeferenced map in StoryMap JS**
 
 ## Step 3: Add Slides in StoryMap JS
@@ -177,12 +177,12 @@ To remove the "tiled" view of your georeferenced map, click the Add Slide button
 
 1. Now add another new slide and enter Raleigh, North Carolina as the location. Type “Raleigh, NC” into the “Headline” box.
 
-![](StoryMapJS_Raleigh.png)
+![](images/StoryMapJS_Raleigh.png)
 **Fig17: StoryMap JS: Search "North Carolina, United States"**
 
 2. Do the same for Asheville, North Carolina; Chapel Hill, North Carolina; and Wilmington, North Carolina (each city should go on a separate slide).
 
-![](StoryMapJS_Cities_Slides.png)
+![](images/StoryMapJS_Cities_Slides.png)
 **Fig18: Add new slides for Asheville, NC, Chapel Hill, NC, and Wilmington, NC**
 
 As you add points to the map, you can see how well you georeferenced your map and if StoryMap JS is able to find the locations you searched for and how well they are aligned with your georeferenced map.

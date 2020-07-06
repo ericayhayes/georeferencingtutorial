@@ -169,7 +169,7 @@ Upon loading the georeferenced map into StoryMap JS, you will notice that the ge
 
 To remove the "tiled" view of your georeferenced map, click the Add Slide button on the left-hand side of your screen.  In the “Search for a location” box, type in North Carolina, United States. It should zoom in to the entire state, and the “tile” effect will go away.  You can zoom in and out to specify how you want the map to look. You
 
-![](StoryMapJS_NC_ZoomedIn.png)
+![](images/StoryMapJS_NC_ZoomedIn.png)
 
 **Fig16: StoryMap JS: Search "North Carolina, United States"**
 

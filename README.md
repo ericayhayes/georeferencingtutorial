@@ -1,4 +1,4 @@
-## Programming Historian Tutorial: Georeferencing and Displaying Historical Maps with Map Warper and ArcGIS online
+## Programming Historian Tutorial: Georeferencing and Displaying Historical Maps with Map Warper and StoryMap JS
 *By Erica Y. Hayes and Mia Partlow*
 
 # Lesson Goals

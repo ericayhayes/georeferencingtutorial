@@ -123,7 +123,7 @@ You now have your map loaded into Map Warper. The interface is organized into th
 1. We are now ready to export our map.  Click the Export tab
 
 
-2. Under Map Services, copy and paste the Tiles URL and save it to be used later in ArcGIS Online. See the example URL below:
+2. Under Map Services, copy and paste the Tiles URL and save it to be used later in StoryMap JS. See the example URL below:
 
 https://mapwarper.net/maps/tile/40217/{z}/{x}/{y}.png
 
@@ -189,7 +189,7 @@ As you add points to the map, you can see how well you georeferenced your map an
 
 # Conclusion
 
-You have now completed this lesson. Knowing how to georeference maps means you can bring historic cartography into the present context and allow for new explorations of historic data. We encourage you to think about the classroom applications for georeferencing, as it is a wonderful exercise for increasing student understanding of geographic, cartographic methods, and the role of space and place in historical thinking. In this lesson we have shown you how to publish your georeferenced map with [ArcGIS Online](https://www.arcgis.com/index.html), but you can also do so using [MapBox](https://www.mapbox.com/), or create your own custom maps using [Leaflet](https://leafletjs.com/).
+You have now completed this lesson. Knowing how to georeference maps means you can bring historic cartography into the present context and allow for new explorations of historic data. We encourage you to think about the classroom applications for georeferencing, as it is a wonderful exercise for increasing student understanding of geographic, cartographic methods, and the role of space and place in historical thinking. In this lesson we have shown you how to publish your georeferenced map with [StoryMap JS](https://storymap.knightlab.com/) there are several online publication options, including [ArcGIS Online](https://www.arcgis.com/index.html), [MapBox](https://www.mapbox.com/), or more advanced tools such as [Leaflet](https://leafletjs.com/), for making custom web maps, or [QGIS Cloud](https://qgiscloud.com/), for publishing maps from [QGIS](https://www.qgis.org/en/site/) to the web.
 
 # Endnotes
 

@@ -1,4 +1,4 @@
-## Programming Historian Tutorial: Georeferencing and Displaying Historical Maps with Map Warper and StoryMap JS
+## Programming Historian Tutorial: Georeferencing and Displaying Historical Maps using Map Warper and StoryMap JS
 *By Erica Y. Hayes and Mia Partlow*
 
 # Lesson Goals
@@ -189,7 +189,7 @@ As you add points to the map, you can see how well you georeferenced your map an
 
 # Conclusion
 
-You have now completed this lesson. Knowing how to georeference maps means you can bring historic cartography into the present context and allow for new explorations of historic data. We encourage you to think about the classroom applications for georeferencing, as it is a wonderful exercise for increasing student understanding of geographic, cartographic methods, and the role of space and place in historical thinking. In this lesson we have shown you how to publish your georeferenced map with ArcGIS Online, but you can also do so using [MapBox](https://www.mapbox.com/), or create your own custom maps using [Leaflet](https://leafletjs.com/).
+You have now completed this lesson. Knowing how to georeference maps means you can bring historic cartography into the present context and allow for new explorations of historic data. We encourage you to think about the classroom applications for georeferencing, as it is a wonderful exercise for increasing student understanding of geographic, cartographic methods, and the role of space and place in historical thinking. In this lesson we have shown you how to publish your georeferenced map with [ArcGIS Online](https://www.arcgis.com/index.html), but you can also do so using [MapBox](https://www.mapbox.com/), or create your own custom maps using [Leaflet](https://leafletjs.com/).
 
 # Endnotes
 

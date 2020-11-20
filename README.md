@@ -1,4 +1,4 @@
-## Programming Historian Tutorial: Georeferencing and Displaying Historical Maps using Map Warper and StoryMap JS
+## Tutorial: Georeferencing and Displaying Historical Maps using Map Warper and StoryMap JS
 *By Erica Y. Hayes and Mia Partlow*
 
 # Lesson Goals
@@ -167,7 +167,7 @@ Upon loading the georeferenced map into StoryMap JS, you will notice that the ge
 
 ## Step 3: Add Slides in StoryMap JS
 
-To remove the "tiled" view of your georeferenced map, click the Add Slide button on the left-hand side of your screen.  In the “Search for a location” box, type in North Carolina, United States. It should zoom in to the entire state, and the “tile” effect will go away.  You can zoom in and out to specify how you want the map to look. 
+To remove the "tiled" view of your georeferenced map, click the Add Slide button on the left-hand side of your screen.  In the “Search for a location” box, type in North Carolina, United States. It should zoom in to the entire state, and the “tile” effect will go away.  You can zoom in and out to specify how you want the map to look.
 
 ![](images/StoryMapJS_NC_ZoomedIn.png)
 
